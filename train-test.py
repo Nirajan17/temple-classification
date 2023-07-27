@@ -3,8 +3,8 @@ import random
 import shutil
 
 
-source_folder = '/Users/nirajanpaudel17/Documents/Python/Major-Project/Temple-Classification/Dataset'
-destination_folder = '/Users/nirajanpaudel17/Documents/Python/Major-Project/Temple-Classification/temple-dataset'
+source_folder = '/Users/nirajanpaudel17/Documents/Python/Major-Project/Web-Scrapping/images'
+destination_folder = '/Users/nirajanpaudel17/Documents/Python/Major-Project/Temple-Classification/dataset'
 
 train_ratio = 0.7  # 70% for training, 30% for testing
 
@@ -23,6 +23,7 @@ for category_folder in os.listdir(source_folder):
     image_files = [f for f in os.listdir(category_path) if f.endswith('.jpg') or f.endswith('.png')]
     
     # Randomly shuffle the image file paths
+
     random.shuffle(image_files)
     
     # Determine the split index based on the train_ratio
